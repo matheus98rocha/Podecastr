@@ -1,0 +1,1 @@
+Utilizando React.JS, Typescript, Next.Js,SASS, JSON-server
