@@ -3,9 +3,9 @@
 
 [![NPM Version][npm-image]][npm-url]
 
-Escute seus podcasts favoritos.
+Escute seus Podcasts favoritos.
 
-![](app.png)
+<img src="/app.png" alt="screen-shot" width="500" height="600">
 
 ## Development setup
 
