@@ -3,10 +3,6 @@
 
 [![NPM Version][npm-image]][npm-url]
 
-Escute seus Podcasts favoritos.
-
-<img src="/app.png" alt="screen-shot" width="500" height="600">
-
 ## Development setup
 
 ```sh
