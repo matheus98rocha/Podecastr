@@ -16,7 +16,7 @@ function Header() {
         <img src="/logo.svg" alt="Podcastr" />
       </Link>
       
-      <p>O melhor para você ouvir, sempre</p>
+      <p>O melhor para você ouvir, sempre!</p>
 
       <span>{currentDate}</span>
     </header>
