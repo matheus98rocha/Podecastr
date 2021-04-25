@@ -7,7 +7,6 @@ import Image from 'next/image';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import { converteDurationToTimeString } from '../../utils/converteDurationToTimeString';
-import { max } from 'date-fns';
 
 function Player() {
 

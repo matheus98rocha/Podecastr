@@ -3,6 +3,9 @@ import { api } from '../services/api';
 import { converteDurationToTimeString } from '../utils/converteDurationToTimeString';
 import { format, parseISO } from 'date-fns';
 
+import { NextSeo } from 'next-seo'; // then add the `NextSeo` at any `pages/` that you wish
+
+
 import Image from 'next/image';
 import Link from 'next/link'
 import ptBR from 'date-fns/locale/pt-BR';
@@ -29,12 +32,26 @@ interface HomeProps {
 
 export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
 
-  const { playList } = usePlayer();
+  const { playList, currenteEpisodeIndex } = usePlayer();
 
   const episodeList = [...latestEpisodes, ...allEpisodes];
 
+  const EpisodePlay = episodeList[currenteEpisodeIndex];
+
   return (
+
     <div className={styles.homePage}>
+      {
+        allEpisodes.map(episode => {
+          return (
+            <>
+              <NextSeo
+                title="Podcastr"
+              />
+            </>
+          )
+        })
+      }
       <section className={styles.latestEpisodes}>
         <h2>Últimos lançamentos</h2>
 
@@ -88,7 +105,10 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
             {
               allEpisodes.map((episode, index) => {
                 return (
-                  <tr key={episode.id}>
+                  <tr
+                    key={episode.id}
+                    className={EpisodePlay ? styles.isActive : ''}
+                  >
                     <td style={{ width: 72 }}>
                       <Image
                         width={120}
