@@ -6,6 +6,7 @@ import { format, parseISO } from 'date-fns';
 import { NextSeo } from 'next-seo'; // then add the `NextSeo` at any `pages/` that you wish
 
 
+
 import Image from 'next/image';
 import Link from 'next/link'
 import ptBR from 'date-fns/locale/pt-BR';
@@ -31,6 +32,7 @@ interface HomeProps {
 }
 
 export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
+
 
   const { playList, currenteEpisodeIndex } = usePlayer();
 
@@ -116,6 +118,8 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
                         src={episode.thumbnail}
                         alt={episode.title}
                         objectFit="cover"
+                        onClick={() => playList(episodeList, index)}
+
                       />
                     </td>
                     <td>

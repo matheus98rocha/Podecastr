@@ -1,7 +1,12 @@
 # Podecastr
 > Aplicação que reproduz podecast..
 
-[![NPM Version][npm-image]][npm-url]
+## Development setup
+React.Js
+Next.Js
+Typescript
+Axios
+Sass
 
 ## Development setup
 
